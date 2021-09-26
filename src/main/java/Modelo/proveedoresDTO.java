@@ -7,6 +7,10 @@ public class proveedoresDTO {
 	private String direccion_pro;
 	private String telefono_pro;
 	private String ciudad_pro;
+	
+	
+	
+	
 	public proveedoresDTO(String nit_pro, String ciudad_pro, String direccion_pro, String nombre_pro,
 			String telefono_pro) {
 	

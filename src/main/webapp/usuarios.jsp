@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="./style.css">
     <title>Website</title>
   </head>
+  
+  <%-- ESTE ES NUESTRO CABECERO --%>
+<jsp:include page="header.jsp" />
+<%-- fin de cabecero --%>
+
   <body>
   
   
@@ -51,41 +56,12 @@ mensaje=request.getParameter("men");
   
   
   
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="tiendavirtual" href="Organic.html"><img style="border-radius: 20px;" src="Imagen/LogoPrinci.jpg" class="img-luid" alt=""></a>
-        <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul class="navbar-nav m-auto my-2 my-lg-0">
-              <a class="propiedades" href="usuarios.jsp">Usuarios</a>
-            </li>
-            <li class="nav-item">
-              <a class="propiedades" href="clientes.jsp">Clientes</a>
-            </li>
-            <li class="nav-item">
-              <a class="propiedades" href="proveedores.jsp">Proveedores</a>
-            </li>
-            <li class="nav-item">
-              <a class="propiedades" href="productos.jsp">productos</a>
-            </li>
-            <li class="nav-item">
-              <a class="propiedades" href="#">Ventas</a>
-            </li>
-            <li class="nav-item">
-              <a class="propiedades" href="#">Reportes</a>
-            </li>
-            <li class="nav-item">
-              <a class="propiedades" href="ingresoadmi.jsp">Ingreso Administrador</a>
-            
-          </ul>
-
-        </div>
-    </div>
-  </nav>
-  <section class="Form my-3 mx-7">
+ 
+  <section class="Form my-3 mx-7"  style="background: url(Imagen/cafe1.jpg)">
     <div class="container">
         <div class="row no-gutters">
             <div class="col-lg-5">
-                <img style="border-radius: 20px;" class="img-responsive" src="./Imagen/cafe1.jpg" alt="">
+                
             </div>
             <div class="col-lg-7 px-5 pt-5">
                 <h1 style="color:#FFFFFF" class="font-weight-bold py-3">Ingrese sus datos</h1>

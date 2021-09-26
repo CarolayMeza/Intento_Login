@@ -1,6 +1,7 @@
 package Controlador;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -65,8 +66,8 @@ public class controlador_users extends HttpServlet {
 			nombre= Auxdto.getNombre();
 		    correo = Auxdto.getCorreo();
 			contrasenia = Auxdto.getContrasenia();
-		
 			userAux=Auxdto.getUsers();
+			
 			response.sendRedirect("usuarios.jsp?cedula="+cedula_u+"&&correo="+correo+"&&nombre="
 			+nombre+"&&password="+contrasenia+"&&users="+userAux);
 	}
