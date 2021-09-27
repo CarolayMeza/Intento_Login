@@ -10,11 +10,6 @@ public class productosDTO {
 	private double precio_venta;
 	
 	
-	
-	
-	
-	
-	
 	public productosDTO(String codigo_producto) {
 		super();
 		this.codigo_producto = codigo_producto;

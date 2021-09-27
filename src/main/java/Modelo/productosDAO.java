@@ -18,10 +18,7 @@ public class productosDAO {
 	PreparedStatement ps= null;
 	ResultSet res= null;
 	
-	
 	//INSERTA LIBRO 
-	
-	
 	public boolean Inserta_Producto(productosDTO product) {
 	    boolean resul=false;
 		try {
@@ -40,10 +37,6 @@ public class productosDAO {
 		}
 		return resul;
 	}
-	
-	
-	
-	
 	//BUSCAR PRODUCTO
 	
 public productosDTO Buscar_Producto(String codigo) {
@@ -64,9 +57,7 @@ public productosDTO Buscar_Producto(String codigo) {
 		return product;
 	}
 	
-
-
-//ACTUALIZAR PRODUCTO
+	//ACTUALIZAR PRODUCTO
 
 public boolean Actualizar_Producto(productosDTO product) {
     boolean resul=false;
@@ -87,8 +78,6 @@ public boolean Actualizar_Producto(productosDTO product) {
 	return resul;
 }
 
-
-
 // ELIMINAR PRODUCTO
 
 public boolean Eliminar_Producto(String auxcodigo) {
@@ -106,9 +95,7 @@ public boolean Eliminar_Producto(String auxcodigo) {
 	return resul;
 }
 
-	
-	
-//CARGAR ARCHIVO DE PRODUCTO	
+	//CARGAR ARCHIVO DE PRODUCTO	
 	
 	public boolean Cargar_Productos(String url) {
 		boolean resul=false;

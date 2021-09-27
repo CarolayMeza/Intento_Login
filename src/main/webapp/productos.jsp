@@ -26,15 +26,9 @@
 <%-- ESTE ES NUESTRO CABECERO --%>
 <jsp:include page="header.jsp" />
 <%-- fin de cabecero --%>
-  
-  
-  
-  
+ 
   <body>
-  
-  
-  
-  
+
   <section class="Form my-3 mx-7" style="background: url(Imagen/cafe1.jpg)">
     <div class="container">
         <div class="row no-gutters">
@@ -54,11 +48,7 @@
 	                            <input class="btn btn-sucess" type="file" value="Examinar" name="archivo" >
 	                            </div> 
                             </div> 
-                            
-                            
-                            
-                            
-                       <div class="container my-3"></div>
+                        <div class="container my-3"></div>
                            <div class="row my-3">
                            	<div class="col-sm my-3">
                            	<div action="productos" method="post"
@@ -78,27 +68,7 @@
                    
 						</div>   
 						</div> 
-						
-						
-				
-						
-						
-						
-                            
-                  
-                
-
-     
 </section>
-
-
-
-
-
-
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>

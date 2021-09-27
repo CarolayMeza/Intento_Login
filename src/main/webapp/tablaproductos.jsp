@@ -14,10 +14,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     
-
-
-
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tabla productos</title>
@@ -33,14 +29,11 @@
 <%-- fin de cabecero --%>
 
 
-
 <body>
 
 <%!String mensaje="";
   String codigo="",iva="",nit="",nombre="",Pcompra="", Pventa="", estado="";
-
 %>
-
 <%
 if(request.getParameter("codigo")!=null){
 codigo= request.getParameter("codigo");
@@ -52,8 +45,6 @@ Pventa=request.getParameter("Pventa");
 estado="disabled";
 }
 %>
-
-
 <%
 if(request.getParameter("nitpro")!=null){
 codigo= request.getParameter("codigo");
@@ -65,12 +56,6 @@ Pventa=request.getParameter("Pventa");
 estado="disabled";
 }
 %>
-
-
-
-
-
-
 <%
 if(request.getParameter("men")!=null){
 codigo="";
@@ -83,33 +68,23 @@ Pventa="";
 estado="";
 mensaje=request.getParameter("men");
 out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
-
 }
 %>
-
 <section class="Form my-3 mx-7"
 	style="background: url(Imagen/cafe1.jpg)">
 	<div class="container">
 	<div class="row no-gutters">
 		<div class="col-lg-5"></div>
-		
-		
-		<div class="col-lg-7 px-5 pt-5">
-		
-		
+		<div class="col-lg-7 px-5 pt-5">			
 			<h1 style="color: white" class="font-weight-bold py-3">Ingrese datos del producto
-			</h1>
-            
-            
+			</h1>        
             <form action= "controlador_productos" method="post">
-		
 			<div class="from-row">
 				<div class="col-lg-7" type="text" placeholder="name"
 					aria-label="name"> <!--  cosa extraña -->
 					<input type="text" placeholder="codigo del producto"
 					class="form-control my-3 p-4" name="codigo" value="<%=codigo%>" required <%=estado%>>
 					<input type="hidden" name="cod" value="<%=codigo%>">
-					
 				</div>
 			</div>
 			
@@ -117,7 +92,6 @@ out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
 				<div class="col-lg-7">
 					<input type="text" placeholder="iva de la compra"
 						class="form-control my-3 p-4" name="iva" value="<%=iva%>">
-						
 				</div>
 			</div>
 			

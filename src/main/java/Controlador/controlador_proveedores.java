@@ -73,7 +73,7 @@ public class controlador_proveedores extends HttpServlet {
 		if(request.getParameter("actualizar")!=null) {
 			String nitpro,ciudad,direccion,nombre,telefono;
 		
-			nitpro = request.getParameter("nit");
+			nitpro = request.getParameter("nitP");
 			ciudad= request.getParameter("ciudadp");
 			direccion= request.getParameter("direccionp");
 			nombre = request.getParameter("nombrep");	

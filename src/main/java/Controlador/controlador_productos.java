@@ -166,7 +166,7 @@ public class controlador_productos extends HttpServlet {
 			
 			//JOptionPane.showMessageDialog(null, Url);
 			
-			
+			if(archivo.getContentType().equals("application/vnd.ms-excel")) {
 			try {
 				InputStream file=archivo.getInputStream();
 				File copia= new File(url+nombre+".csv");
@@ -181,11 +181,11 @@ public class controlador_productos extends HttpServlet {
 				file.close();
 				
 				JOptionPane.showMessageDialog(null, "cargado correctamente..");
-				response.sendRedirect("productos.jsp?men=producto no se Eliminó");
+				response.sendRedirect("productos.jsp?men=producto se cargó");
 				
 				if (prodDao.Cargar_Productos(url+nombre+".csv")) {
 					JOptionPane.showMessageDialog(null,"Registrado correctamente");
-					response.sendRedirect("productos.jsp?men=producto no se Eliminó");
+					response.sendRedirect("productos.jsp?men=producto no se cargó");
 					
 				}else {
 					JOptionPane.showMessageDialog(null,"productos no se registraron");
@@ -193,6 +193,10 @@ public class controlador_productos extends HttpServlet {
 				}
 			} catch (Exception e) {
 					JOptionPane.showMessageDialog(null,"error al cargar el archivo"+e);
+			}
+			
+			}else {JOptionPane.showMessageDialog (null, "Formato de Archivo no permitido");
+				
 			}
 		}
 		

@@ -77,7 +77,7 @@ public class controlador_clientes extends HttpServlet {
 		if(request.getParameter("actualizar")!=null) {
 		String cedula,nombre,correo,direccion,telefono;
 		
-		cedula = request.getParameter("cedula");
+		cedula = request.getParameter("cedulaC");
 		direccion = request.getParameter("direccion");
 		   correo= request.getParameter("correo");
 		nombre = request.getParameter("nombre");	

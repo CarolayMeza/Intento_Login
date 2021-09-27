@@ -22,7 +22,7 @@
 <%-- fin de cabecero --%>
   
   
-  <body>
+<body>
   
   <%!String mensaje="";
   String nit="",ciudad="",direccion="",nombre="",telefono="",estado="";
@@ -60,7 +60,7 @@ mensaje = request.getParameter("men");
   
     
     
-  <section class="Form my-3 mx-7 style="background: url(Imagen/cafe1.jpg)">
+<section class="Form my-3 mx-7" style="background: url(Imagen/cafe1.jpg)">
     <div class="container">
         <div class="row no-gutters">
             <div class="col-lg-5">
@@ -71,7 +71,8 @@ mensaje = request.getParameter("men");
                 <form action="controlador_proveedores" method="post">
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="text" placeholder="NIT" class="form-control my-3 p-4" name="nit" value="<%=nit%>">
+                            <input type="text" placeholder="NIT" class="form-control my-3 p-4" name="nit" value="<%=nit%>" required <%=estado%>>
+                            <input type="hidden" name="nitP" value="<%=nit%>">
                   
                         </div>
                     </div>
@@ -95,6 +96,7 @@ mensaje = request.getParameter("men");
                             <input type="text" placeholder="telefono"  class="form-control my-3 p-4" name="telefonop" value="<%=telefono%>">
                         </div>
                     </div>
+                    
                     <div class="from-row">
                         <div class="col-lg-7">
                             <button type="submit" class="btn btn-success" name="consultar">consultar</button>

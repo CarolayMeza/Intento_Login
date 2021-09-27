@@ -75,7 +75,7 @@ public class controlador_users extends HttpServlet {
 		if(request.getParameter("actualizar")!=null) {
 		String cedula,nombre,correo,contrasenia,usuarios;
 		
-		cedula = request.getParameter("cedula");
+		cedula = request.getParameter("cedulaU");
 		correo = request.getParameter("correo");
 		   nombre = request.getParameter("nombre");
 		contrasenia = request.getParameter("password");	

@@ -27,8 +27,7 @@
   
   
     <div class="container text-center my-5">
-		<a class="tiendavirtual" href="index.jsp"><img
-			style="border-radius: 20px;" src="Imagen/LogoPrinci.jpg"
+		<a class="tiendavirtual" href="index.jsp"><img style="border-radius: 20px;" src="Imagen/LogoPrinci.jpg"
 			class="img-luid" alt=""></a>
 	</div>
 
