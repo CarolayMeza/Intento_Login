@@ -72,6 +72,7 @@ public boolean Actualizar_Producto(productosDTO product) {
 	ps.setDouble(5,product.getPrecio_venta());
 	ps.setString(6,product.getCodigo_producto());
 	resul=ps.executeUpdate()>0;	
+	JOptionPane.showMessageDialog(null, "Se actualizo el producto");
 	}catch(SQLException ex) {
 		JOptionPane.showMessageDialog(null,"error al actualizar producto: "+ex);
 	}

@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="Css/styles.css">
     <title>Website</title>
   </head>
   
@@ -60,11 +60,11 @@ mensaje=request.getParameter("men");
   <section class="Form my-3 mx-7"  style="background: url(Imagen/cafe1.jpg)">
     <div class="container">
         <div class="row no-gutters">
-            <div class="col-lg-5">
+            <div class="col-lg-5"></div>
                 
-            </div>
+            
             <div class="col-lg-7 px-5 pt-5">
-                <h1 style="color:#FFFFFF" class="font-weight-bold py-3">Ingrese sus datos</h1>
+                <h1 style="color:#FFFFFF" class="font-weight-bold py-3">Ingrese los datos del usuario</h1>
                 <form action= "controlador_users" method="post">
                     <div class="from-row">
                         <div class="col-lg-7">
@@ -95,15 +95,25 @@ mensaje=request.getParameter("men");
                             <input type="text" placeholder="ingresar usuario" class="form-control my-3 p-4"name="users"value="<%=users%>" >
                         </div>
                   </div>
-                  <div class="from-row">
-                      <div class="col-lg-7">
+                  
+                  <div class="container">
+						<div class="row">
+						
+                
+                    <div class="col-sm my-3">
                           <button type="submit" class="btn1 mt-3px mb-5" name="buscar" value="buscar">consultar </button>
+                       </div>
+                       <div class="col-sm my-3">
                           <button type="submit" class="btn1 mt-3px mb-5" name="crear"value="Crear">crear</button>
+                       </div>
+                       <div class="col-sm my-3">
                           <button type="submit" class="btn1 mt-3px mb-5"name="actualizar"value="Actualizar">actualizar</button>
+                       </div>
+                          <div class="col-sm my-3">
                           <button type="submit" class="btn1 mt-3px mb-5" name="borrar"value="borrar">borrar</button>
                       </div>
                   </div>
-                    
+                    </div>
                 
                 </form>
               </div>

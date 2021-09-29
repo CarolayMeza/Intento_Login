@@ -41,7 +41,7 @@
 		<div class="col-lg-7  text-center">
 			<h1 style="color: white">BIENVENIDO ADMINISTRADOR</h1>
 			<div class="col my-3 text-center">
-				<p style="color: white">Iniciar sesión</p>
+				
                 
                 <form action="Control_login" method="post">
                 

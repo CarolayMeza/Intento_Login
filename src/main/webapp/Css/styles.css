@@ -1,4 +1,5 @@
 @charset "ISO-8859-1";
+
 *{
     padding: 0;
     margin: 0;
@@ -129,6 +130,12 @@ footer{
     background-color: black;
     color: white;
     text-align: center;
-    height: 50px;
-    line-height: 50px;
+    height: 30px;
+    line-height: 30px;
 }
+
+.link:hover{
+    color: black;
+}
+
+

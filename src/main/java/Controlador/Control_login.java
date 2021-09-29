@@ -42,7 +42,7 @@ public class Control_login extends HttpServlet {
 				JOptionPane.showMessageDialog(null, "Bienvenido");
 				response.sendRedirect("usuarios.jsp?nom="+usuario);
 			} else{
-				JOptionPane.showMessageDialog(null, "Datos Incorrectos");
+				JOptionPane.showMessageDialog(null, "usuario o contraseña errados, intente de nuevo");
 				response.sendRedirect("index.jsp");
 			}
 				
