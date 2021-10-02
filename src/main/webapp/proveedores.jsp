@@ -72,7 +72,7 @@ mensaje = request.getParameter("men");
                 <form action="controlador_proveedores" method="post">
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="text" placeholder="NIT" class="form-control my-3 p-4" name="nit" value="<%=nit%>" required <%=estado%>>
+                            <input type="number" placeholder="NIT" class="form-control my-3 p-4" name="nit" value="<%=nit%>" required <%=estado%>>
                             <input type="hidden" name="nitP" value="<%=nit%>">
                   
                         </div>
@@ -94,7 +94,7 @@ mensaje = request.getParameter("men");
                     </div>
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="text" placeholder="telefono"  class="form-control my-3 p-4" name="telefonop" value="<%=telefono%>">
+                            <input type="number" placeholder="telefono"  class="form-control my-3 p-4" name="telefonop" value="<%=telefono%>">
                         </div>
                     </div>
                     

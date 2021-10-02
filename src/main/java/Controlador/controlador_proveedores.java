@@ -47,10 +47,10 @@ public class controlador_proveedores extends HttpServlet {
 		proveedoresDTO proveDto = new proveedoresDTO(nitpro,ciudad,direccion,nombre,telefono);
 		if(proveDao.Crear_Proveedor(proveDto)) {
 			JOptionPane.showMessageDialog(null, "Clientes Registrado Exitosamente.");
-			response.sendRedirect("proveedores.jsp?men= Cliente Registrado Exitosamente.");
+			response.sendRedirect("proveedores.jsp?men= proveedor Registrado Exitosamente.");
 		}else {
 			JOptionPane.showMessageDialog(null, "El Cliente no se Registro.");
-			response.sendRedirect("proveedores.jsp?men=El Cliente no se Registro.");
+			response.sendRedirect("proveedores.jsp?men=El proveedor no se Registro.");
 		}
 		}
 		
@@ -81,11 +81,11 @@ public class controlador_proveedores extends HttpServlet {
 		
 		proveedoresDTO proveDto_Act = new proveedoresDTO(nitpro,ciudad,direccion,nombre,telefono);
 		if(proveDao.Actualizar_Proveedor(proveDto_Act)) {
-			JOptionPane.showMessageDialog(null, "Cliente se Actualizo Exitosamente.");
-			response.sendRedirect("proveedores.jsp?men=Cliente Actualizado Exitosamente.");
+			JOptionPane.showMessageDialog(null, "Proveedor se Actualizo Exitosamente.");
+			response.sendRedirect("proveedores.jsp?men=proveedor Actualizado Exitosamente.");
 		}else {
 			JOptionPane.showMessageDialog(null, "El Cliente no se Modifico.");
-			response.sendRedirect("proveedores.jsp?men=El Cliente no se Modifico.");
+			response.sendRedirect("proveedores.jsp?men=El proveedor no se Modifico.");
 		}
 		}
 		
@@ -98,10 +98,10 @@ public class controlador_proveedores extends HttpServlet {
 			int op=JOptionPane.showConfirmDialog(null, "Desea eliminar el Cliente de la :"+nitpro);
 			if(op==0) {
 			if(proveDao.Eliminar_Proveedor(nitpro)) {
-				response.sendRedirect("proveedores.jsp?men=Usuario Eliminado");
+				response.sendRedirect("proveedores.jsp?men=proveedor Eliminado");
 				
 			}else {
-				response.sendRedirect("proveedores.jsp?men=Usuario no se Eliminó");
+				response.sendRedirect("proveedores.jsp?men=Proveedor no se Eliminó");
 
 			}
 			

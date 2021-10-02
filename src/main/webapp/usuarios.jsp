@@ -68,13 +68,13 @@ mensaje=request.getParameter("men");
                 <form action= "controlador_users" method="post">
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="text" placeholder="cedula" class="form-control my-3 p-4" name="cedula" value="<%=cedula%>" required <%=estado%>  >
+                            <input type="number" placeholder="cedula" class="form-control my-3 p-4" name="cedula" value="<%=cedula%>" required   >
                             <input type="hidden" name="cedulaU" value="<%=cedula%>">
                         </div> 
                    </div>
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="email" placeholder="correo electronico" class="form-control my-3 p-4"name="correo" value="<%=correo%>" >
+                            <input type="email" placeholder="correo electronico" class="form-control my-3 p-4"name="correo" value="<%=correo%>"   >
                         </div>
                    </div>
                    <div class="from-row">

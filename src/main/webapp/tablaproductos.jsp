@@ -82,7 +82,7 @@ out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
 			<div class="from-row">
 				<div class="col-lg-7" type="text" placeholder="name"
 					aria-label="name"> <!--  cosa extraña -->
-					<input type="text" placeholder="codigo del producto"
+					<input type="number" placeholder="codigo del producto"
 					class="form-control my-3 p-4" name="codigo" value="<%=codigo%>" required <%=estado%>>
 					<input type="hidden" name="cod" value="<%=codigo%>">
 				</div>
@@ -90,14 +90,14 @@ out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
 			
 			<div class="from-row">
 				<div class="col-lg-7">
-					<input type="text" placeholder="iva de la compra"
+					<input type="number" placeholder="iva de la compra"
 						class="form-control my-3 p-4" name="iva" value="<%=iva%>">
 				</div>
 			</div>
 			
 			<div class="from-row">
 				<div class="col-lg-7">
-					<input type="text" placeholder="nitproveedor"
+					<input type="number" placeholder="nitproveedor"
 						class="form-control my-3 p-4" name="nit" value="<%=nit%>"  <%=estado%> >
 						<input type="hidden" name="nitpro" value="<%=nit%>">
 				</div>
@@ -110,13 +110,13 @@ out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
 			</div>
 			<div class="from-row">
 				<div class="col-lg-7">
-					<input type="text" placeholder="precio_compra"
+					<input type="number" placeholder="precio_compra"
 						class="form-control my-3 p-4" name="Pcompra" value="<%=Pcompra%>">
 				</div>
 			</div>
 			<div class="from-row">
 				<div class="col-lg-7">
-					<input type="text" placeholder="precio_venta"
+					<input type="number" placeholder="precio_venta"
 						class="form-control my-3 p-4" name="Pventa" value="<%=Pventa%>">
 				</div>
 			</div>

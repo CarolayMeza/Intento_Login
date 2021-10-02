@@ -78,8 +78,8 @@ mensaje = request.getParameter("men");
                 <form action= "controlador_clientes" method="post">
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="text" placeholder="cédula" class="form-control my-3 p-4 "name="cedula" value="<%=cedula%>"  required <%=estado%>>
-                            <input type="hidden" name="cedulaC" value="<%=cedula%>">   
+                            <input type="number" placeholder="cédula" class="form-control my-3 p-4 "name="cedula" value="<%=cedula%>"   >
+                         
                         </div>
                     </div>
                     
@@ -104,7 +104,7 @@ mensaje = request.getParameter("men");
                     
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="text" placeholder="teléfono" class="form-control my-3 p-4"   name="telefono"value="<%=telefono%>">   
+                            <input type="number" placeholder="teléfono" class="form-control my-3 p-4"   name="telefono"value="<%=telefono%>">   
                         </div>
                     </div>
                       </form>

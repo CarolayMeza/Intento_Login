@@ -64,6 +64,7 @@ public class controlador_clientes extends HttpServlet {
 			
 			cedula_u=request.getParameter("cedula");
 			clientesDTO Auxdto=clientDao.Buscar_Cliente(cedula_u);
+			if(Auxdto!=null) {
 			cedula_u=Auxdto.getCedula();
 			direccion= Auxdto.getDireccion();
 		    correo = Auxdto.getCorreo();
@@ -72,12 +73,18 @@ public class controlador_clientes extends HttpServlet {
 			
 			response.sendRedirect("clientes.jsp?cedula="+cedula_u+"&&direccion="+direccion+"&&correo="
 			+correo+"&&nombre="+nombre+"&&telefono="+telefono);
+	}else {
+		response.sendRedirect("clientes.jsp?men=El cliente no existe");
 	}
+		}
+		
+		
+		
 		
 		if(request.getParameter("actualizar")!=null) {
 		String cedula,nombre,correo,direccion,telefono;
 		
-		cedula = request.getParameter("cedulaC");
+		cedula = request.getParameter("cedula");
 		direccion = request.getParameter("direccion");
 		   correo= request.getParameter("correo");
 		nombre = request.getParameter("nombre");	

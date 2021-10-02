@@ -62,6 +62,7 @@ public class controlador_users extends HttpServlet {
 			
 			cedula_u=request.getParameter("cedula");
 			usuariosDTO Auxdto=userDao.Buscar_Usuario(cedula_u);
+			if(Auxdto!=null) {
 			cedula_u=Auxdto.getCedula();
 			nombre= Auxdto.getNombre();
 		    correo = Auxdto.getCorreo();
@@ -70,7 +71,10 @@ public class controlador_users extends HttpServlet {
 			
 			response.sendRedirect("usuarios.jsp?cedula="+cedula_u+"&&correo="+correo+"&&nombre="
 			+nombre+"&&password="+contrasenia+"&&users="+userAux);
+	}else {
+		response.sendRedirect("usuarios.jsp?men=El Usuario no existe");
 	}
+		}
 		
 		if(request.getParameter("actualizar")!=null) {
 		String cedula,nombre,correo,contrasenia,usuarios;
