@@ -15,18 +15,18 @@ public class clientesDAO {
 	PreparedStatement ps= null;
 	ResultSet res= null;
 	
-	public boolean Crear_Cliente(clientesDTO clientes) {
+	public boolean Crear_Cliente(clientesDTO cliente) {
 	    boolean resul=false;
 		try {
 		String sql="insert into Clientes values(?,?,?,?,?)";
 		ps = con.prepareStatement(sql);
-		ps.setString(1, clientes.getCedula());
-		ps.setString(2, clientes.getDireccion());
-		ps.setString(3, clientes.getCorreo());
-		ps.setString(4, clientes.getNombre());
-		ps.setString(5, clientes.getTelefono());
+		ps.setString(1, cliente.getCedula());
+		ps.setString(2, cliente.getDireccion());
+		ps.setString(3, cliente.getCorreo());
+		ps.setString(4, cliente.getNombre());
+		ps.setString(5, cliente.getTelefono());
 		resul=ps.executeUpdate()>0;	
-		JOptionPane.showMessageDialog(null," insertado ");
+		JOptionPane.showMessageDialog(null," Cliente insertado ");
 		}catch(SQLException ex) {
 			JOptionPane.showMessageDialog(null,"error al insertar: "+ex);
 		}
@@ -37,7 +37,7 @@ public class clientesDAO {
 		
 		clientesDTO user= null;
 		try {
-		String sql="select * from Clientes where Cedula=?";	
+		String sql="select * from Clientes where cedula_cliente=?";	
 		ps=con.prepareStatement(sql);
 		ps.setString(1, cedula);
 		res=ps.executeQuery();
@@ -54,7 +54,7 @@ public class clientesDAO {
 	public boolean Actualizar_Cliente(clientesDTO user) {
 	    boolean resul=false;
 		try {
-		String sql="update Clientes set direccion_cliente=?, email_cliente=?,nombre_cliente=?, telefonono_cliente=? where cedula=?";
+		String sql="update Clientes set direccion_cliente=?, email_cliente=?,nombre_cliente=?, telefonono_cliente=? where cedula_cliente=?";
 		ps = con.prepareStatement(sql);
 		
 		ps.setString(1, user.getDireccion());
@@ -73,7 +73,7 @@ public class clientesDAO {
 	public boolean Eliminar_Cliente(String auxcedula) {
 	    boolean resul=false;
 		try {
-		String sql="delete from Clientes where cedula=?";
+		String sql="delete from Clientes where cedula_cliente=?";
 		ps = con.prepareStatement(sql);
 
 		ps.setString(1,auxcedula);

@@ -40,12 +40,12 @@
 
 <%
 if(request.getParameter("cedula")!=null){
-direccion= request.getParameter("direccion");
 cedula=request.getParameter("cedula");
+direccion= request.getParameter("direccion");
 correo=request.getParameter("correo");
 nombre=request.getParameter("nombre");
 telefono=request.getParameter("telefono");
-estado="readonly";
+estado="disabled";
 }
 %>
 <%
@@ -78,9 +78,9 @@ mensaje = request.getParameter("men");
                 <form action= "controlador_clientes" method="post">
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="number" placeholder="cédula" class="form-control my-3 p-4 "name="cedula" value="<%=cedula%>"   >
-                         
-                        </div>
+                            <input type="number" placeholder="cédula" class="form-control my-3 p-4 "name="cedula" value="<%=cedula%>" required>
+                            <input type="hidden" name="cedulaU" value="<%=cedula%>">
+                       </div>
                     </div>
                     
                      <div class="from-row">
@@ -107,10 +107,9 @@ mensaje = request.getParameter("men");
                             <input type="number" placeholder="teléfono" class="form-control my-3 p-4"   name="telefono"value="<%=telefono%>">   
                         </div>
                     </div>
-                      </form>
-                      
                      
-               <form action= "controlador_clientes" method="post">
+                      
+    
                     
                    <div class="container">
                     <div class="row">

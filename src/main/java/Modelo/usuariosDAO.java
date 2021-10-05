@@ -33,6 +33,7 @@ public class usuariosDAO {
 		return resul;
 	}
 	
+	
 	public usuariosDTO Buscar_Usuario(String cedula) {
 		
 		usuariosDTO user= null;

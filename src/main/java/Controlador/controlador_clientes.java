@@ -13,6 +13,7 @@ import Modelo.clientesDAO;
 import Modelo.clientesDTO;
 
 
+
 /**
  * Servlet implementation class controlador_users
  */
@@ -38,10 +39,10 @@ public class controlador_clientes extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		clientesDAO clientDao= new clientesDAO(); 
+
 		if(request.getParameter("crear")!=null) {
 		String nombre,cedula,correo,telefono,direccion;
 		
-	
 		cedula = request.getParameter("cedula");
 		direccion = request.getParameter("direccion");
 		correo = request.getParameter("correo");

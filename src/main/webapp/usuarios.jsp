@@ -50,6 +50,8 @@ password="";
 users="";
 estado="";
 mensaje=request.getParameter("men");
+out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
+
 }
 %>
   

@@ -11,7 +11,6 @@ public class productosDTO {
 	
 	
 	public productosDTO(String codigo_producto) {
-		super();
 		this.codigo_producto = codigo_producto;
 	}
 
