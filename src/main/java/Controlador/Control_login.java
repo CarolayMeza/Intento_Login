@@ -30,7 +30,7 @@ public class Control_login extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String usuario,password;
 
-		String Usuarios[]= new String[3];
+
 		
 		if (request.getParameter("Ingreso")!=null) {
 			usuario=request.getParameter("Correo");
@@ -38,9 +38,6 @@ public class Control_login extends HttpServlet {
 			if(usuario.equals("admininicial") && password.equals("admin123456")) {
 				JOptionPane.showMessageDialog(null, "Bienvenido administrador");
 				response.sendRedirect("usuarios.jsp?nom"+usuario);
-			}else if(usuario==Usuarios[0] && password==Usuarios[2]) {
-				JOptionPane.showMessageDialog(null, "Bienvenido");
-				response.sendRedirect("usuarios.jsp?nom="+usuario);
 			} else{
 				JOptionPane.showMessageDialog(null, "usuario o contraseña errados, intente de nuevo");
 				response.sendRedirect("index.jsp");

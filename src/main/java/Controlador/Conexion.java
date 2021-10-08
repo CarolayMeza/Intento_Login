@@ -1,12 +1,7 @@
 package Controlador;
 
 import java.sql.Connection;
-
-
 import java.sql.DriverManager;
-
-import javax.swing.JOptionPane;
-
 public class Conexion {
 
 	private String bd="Tienda_Organica";
@@ -20,11 +15,15 @@ public class Conexion {
 		try {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		conec= DriverManager.getConnection(url,user,pass);
-		//JOptionPane.showMessageDialog(null, "Conexion ok.....");
+		System.out.println("Conexion Exitosa!");
 		}catch(Exception e) {
-			JOptionPane.showMessageDialog(null, "Error en la Conexion....."+e);
+			System.out.println("Conexion Fallida!"+e.getMessage());
 		}
 		return conec;
 	}
+//	public static void main(String[] args) {
+//		Conexion con=new Conexion();
+//		con.Conectar();
+//	}
 
 }

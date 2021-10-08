@@ -112,4 +112,23 @@ public boolean Eliminar_Producto(String auxcodigo) {
 		}
 		return resul;
 	}
+	
+public productosDTO Buscar_Producto2(productosDTO producto) {
+		
+		productosDTO product= null;
+		try {
+		String sql="select * from Productos where codigo_producto=?";	
+		ps=con.prepareStatement(sql);
+		ps.setString(1, producto.getCodigo_producto());
+		//ps.setString(1, codigo);
+		res=ps.executeQuery();
+		while(res.next()) {
+			product = new productosDTO(res.getString(1),res.getDouble(2),res.getString(3),res.getString(4),res.getDouble(5),res.getDouble(6));
+		}
+		}catch(SQLException e) {
+			JOptionPane.showMessageDialog(null,"Error al consultar producto" +e);
+		}
+	
+		return product;
+	}
 }

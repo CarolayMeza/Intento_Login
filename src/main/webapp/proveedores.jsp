@@ -84,7 +84,7 @@ mensaje = request.getParameter("men");
                     </div>
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="email" placeholder="direccion" class="form-control my-3 p-4" name="direccionp" value="<%=direccion%>">
+                            <input type="text" placeholder="direccion" class="form-control my-3 p-4" name="direccionp" value="<%=direccion%>">
                         </div>
                     </div>
                     <div class="from-row">

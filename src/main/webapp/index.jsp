@@ -1,3 +1,5 @@
+<!--   <meta http-equiv="refresh" content="0;url=${pageContext.request.contextPath}/ventas.jsp"> -->
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!doctype html>
@@ -22,6 +24,21 @@
   </head>
   <body style="background: url(Imagen/cafe1.jpg)">
   
+   <%!
+    String ced="", cliente="";
+    
+    %>
+  
+  
+  
+  <%
+if(request.getParameter("men")!=null){
+cliente="";
+ced="";
+String mensaje=request.getParameter("men");
+out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
+}
+%>
   
   
   

@@ -37,7 +37,7 @@ public class clientesDAO {
 		
 		clientesDTO user= null;
 		try {
-		String sql="select * from Clientes where cedula_cliente=?";	
+		String sql="select * from clientes where cedula_cliente=?";	
 		ps=con.prepareStatement(sql);
 		ps.setString(1, cedula);
 		res=ps.executeQuery();
@@ -45,7 +45,8 @@ public class clientesDAO {
 			user = new clientesDTO(res.getString(1),res.getString(2),res.getString(3),res.getString(4),res.getString(5));
 		}
 		}catch(SQLException e) {
-			JOptionPane.showMessageDialog(null,"Error al consultar" +e);
+//			JOptionPane.showMessageDialog(null,"Error al consultar" +e.getMessage());
+			System.out.println("Error al Consultar = "+e.getMessage());
 		}
 	
 		return user;
