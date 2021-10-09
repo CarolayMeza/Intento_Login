@@ -56,7 +56,7 @@ out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
    
         <div class="row justify-content-center">
 		<div class="col-lg-7  text-center">
-			<h1 style="color: white">BIENVENIDO ADMINISTRADOR</h1>
+			<h1 style="color: white">Hola Carol ADMINISTRADOR</h1>
 			<div class="col my-3 text-center">
 				
                 
